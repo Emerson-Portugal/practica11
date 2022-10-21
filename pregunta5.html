@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <script>
+        var personnel = [
+            {
+                id: 5,
+                name: " Luke Skywalker ",
+                pilotingScore: 98,
+                shootingScore: 56,
+                isForceUser: true,
+            },
+            {
+                id: 82,
+                name: " Sabine Wren ",
+                pilotingScore: 73,
+                shootingScore: 99,
+                isForceUser: false,
+            },
+            {
+                id: 22,
+                name: " Zeb Orellios ",
+                pilotingScore: 20,
+                shootingScore: 59,
+                isForceUser: false,
+            },
+            {
+                id: 15,
+                name: " Ezra Bridger ",
+                pilotingScore: 43,
+                shootingScore: 67,
+                isForceUser: true,
+            },
+            {
+                id: 11,
+                name: " Caleb Dume ",
+                pilotingScore: 71,
+                shootingScore: 85,
+                isForceUser: true,
+            }
+        ];
+
+        // Normal
+        total = 0
+        valor = 0
+        for (let i = 0; i < personnel.length; i++) {
+            if (personnel[i].isForceUser) {
+                total = personnel[i].pilotingScore + personnel[i].shootingScore
+                valor = valor + total
+            }
+        }
+        console.log(valor)
+
+
+        total = 0
+        valor = 0
+        console.log("funcional  ")
+        // funcional 
+        personnel.map(function (element) {
+            if (element.isForceUser) {
+                total = element.pilotingScore + element.shootingScore
+                valor = valor + total
+            }
+        });
+        console.log(valor)
+
+
+
+
+    </script>
+</body>
+
+</html>

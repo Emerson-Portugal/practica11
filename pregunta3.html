@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <script>
+        let tasks = [
+            {
+                'name': 'Buy milk from the shop',
+                'duration': 20,
+                'priority': 1
+            },
+            {
+                'name': 'Clean the house',
+                'duration': 120,
+                'priority': 3
+            },
+            {
+                'name': 'Study JS functions',
+                'duration': 180,
+                'priority': 1
+            }
+        ];
+
+        // Normal
+        total = 0
+        for(let i=0; i<tasks.length;i++){
+            total += tasks[i].duration
+        }
+        console.log(total)
+
+    console.log("funcional  ")
+        total = 0
+        // funcional 
+        let modifiedArr = tasks.map(function (element) {
+            total += element.duration
+        });
+        console.log(total)
+
+
+
+
+    </script>
+</body>
+
+</html>

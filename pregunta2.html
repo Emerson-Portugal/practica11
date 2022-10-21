@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+</head>
+
+<body>
+    <script>
+        let tasks = [
+            {
+                'name': 'Buy milk from the shop',
+                'duration': 20,
+                'priority': 1
+            },
+            {
+                'name': 'Clean the house',
+                'duration': 120,
+                'priority': 3
+            },
+            {
+                'name': 'Study JS functions',
+                'duration': 180,
+                'priority': 1
+            }
+        ];
+
+        // Normal
+
+        for(let i=0; i<tasks.length;i++){
+            if (tasks[i].priority == 1){
+                console.log(tasks[i].name)
+            }
+            
+        }
+
+        // funcional 
+
+
+        let modifiedArr = tasks.map(function (element) {
+            if(element.priority == 1){
+                return element.name
+            }
+            else{
+                return null
+            }
+        });
+
+        modifiedArr = modifiedArr.filter(function(element){
+            if( element !== null){
+                return element
+            }
+        })
+        console.log(modifiedArr)
+        
+
+
+
+    </script>
+</body>
+
+</html>
