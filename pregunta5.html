@@ -57,16 +57,20 @@
 
 
         total = 0
-        valor = 0
+        full = 0
         console.log("funcional  ")
         // funcional 
-        personnel.map(function (element) {
-            if (element.isForceUser) {
-                total = element.pilotingScore + element.shootingScore
-                valor = valor + total
-            }
-        });
-        console.log(valor)
+
+        let FF = personnel.filter(function (element) {
+            return element.isForceUser == true
+        })
+
+        FF.map(function (element) {
+            total = element.pilotingScore + element.shootingScore
+            full = full + total
+        })
+        console.log(full)
+       
 
 
 

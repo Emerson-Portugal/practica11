@@ -30,11 +30,14 @@
         total = 0
         console.log("funcional  ")
         // funcional 
-        let modifiedArr = vehicles.map(function (element) {
-            if (element.type == 'suv') {
-                console.log(element.price)
-            }
-        });
+        let modifiedArr = vehicles.filter(function(e){
+            return e.type == "suv"
+        })
+
+        modifiedArr.map(function(e){
+            console.log( e.price)
+        })
+
 
 
 

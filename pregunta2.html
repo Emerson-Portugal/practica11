@@ -36,24 +36,14 @@
         // funcional 
 
 
-        let modifiedArr = tasks.map(function (element) {
-            if(element.priority == 1){
-                return element.name
-            }
-            else{
-                return null
-            }
-        });
-
-        modifiedArr = modifiedArr.filter(function(element){
-            if( element !== null){
-                return element
-            }
+        total = 0
+        console.log("funcional  ")
+        // funcional 
+        let modifiedArr = tasks.filter(function(e){
+            return e.priority == 1
         })
+
         console.log(modifiedArr)
-        
-
-
 
     </script>
 </body>
